@@ -33,6 +33,7 @@ export default function bookApp(
       idx = state.authors.findIndex(author => author.id === action.id);
       return {
         ...state,
+        books: [...state.books],
         authors: [...state.authors.slice(0, idx), ...state.authors.slice(idx + 1)]
       };
 
