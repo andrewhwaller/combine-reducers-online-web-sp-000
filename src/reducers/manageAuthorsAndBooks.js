@@ -10,7 +10,7 @@ export default function bookApp(
     case "ADD_BOOK":
       return {
         ...state,
-        authors: [...state.authors]
+        authors: [...state.authors],
         books: [...state.books, action.book]
       };
 
@@ -18,6 +18,7 @@ export default function bookApp(
       idx = state.books.findIndex(book => book.id === action.id);
       return {
         ...state,
+        a
         books: [...state.books.slice(0, idx), ...state.books.slice(idx + 1)]
       };
 
